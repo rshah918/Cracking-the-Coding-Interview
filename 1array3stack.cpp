@@ -21,8 +21,8 @@ class arrayStack{
   bool EmptyIndices[300];
   int tops[3] = {0,0,0};
   Node* stacks = new Node[300];
-  /*'''Create an array of nodes. New elements will be added in the first free element in the
-   slot list, and will point to the previous node in that stack.'''*/
+  /*Create an array of nodes. New elements will be added in the first free element in the
+   slot list, and will point to the previous node in that stack*/
   public:
     void arrayStack(){
       //populate boolean array with "true" values

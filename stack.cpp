@@ -19,30 +19,27 @@ class Stack{
       top = NULL;
     }
     void push(int val){
-      if(top == NULL){
         Node* newNode = new Node(val);
-        top = newNode;
-      }
-      else{
-        Node* newNode = new Node(val);
-        newNode->next = top;
-        top = newNode;
-      }
+        if(top == nullptr){
+            top = newNode;
+        }
+        else{
+            newNode->next = top;
+            top = newNode;
+        }
     }
     void show(){
-      Node curr = *top;
-      while(curr.next != NULL){
-        cout << curr.data << endl;
-        curr = *curr.next;
-      }
+        Node* curr = top;
+        while(curr != nullptr){
+            cout << curr->data << endl;
+            curr = curr->next;
+        }
     }
     int pop(){
-      Node* newNode = top;
-      top = top->next;
-      return newNode->data;
+        Node* curr = top;
+        top = top->next;
+        return curr->data;
     }
-
-
 };
 
 
